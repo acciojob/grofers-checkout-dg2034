@@ -14,12 +14,12 @@ const getSum = () => {
 	newCell.colSpan = 2;
     newCell.textContent = "Total Price: " + sum;
     newRow.appendChild(newCell);
-	// const oldRow = document.querySelector(".total-row");
- //    if (oldRow) {
- //        oldRow.remove();
- //    }
- //    newRow.classList.add("total-row");
- //    document.querySelector("table").appendChild(newRow);
+	const oldRow = document.querySelector(".total-row");
+    if (oldRow) {
+        oldRow.remove();
+    }
+    newRow.classList.add("total-row");
+    document.querySelector("table").appendChild(newRow);
 };
 
 getSumBtn.addEventListener("click", getSum);
